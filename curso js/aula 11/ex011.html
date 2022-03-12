@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrangeiro doidao</title>
+    <style>
+        body {
+            background: rgb(44, 44, 44);
+            color: azure;
+            font: normal 15pt Arial;
+        }
+        input{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    qual pais vc mora? <input type="text" name="txtp" id="txtp">
+    <input type="button" value="verificar" onclick="verificar() ">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var p1 = document.getElementById("txtp").value
+            var res = document.getElementById('res')
+            res.innerHTML = `seu pais é ${p1.toUpperCase()}</br>` 
+            if( p1.toLowerCase() == 'brasil'){
+                res.innerHTML += 'voce é brasileiro</br>'
+            }else{
+                res.innerHTML += 'voce é estrangeiro</br>'
+            }
+        }
+    </script>
+</body>
+</html>
